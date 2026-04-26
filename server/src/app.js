@@ -1,5 +1,6 @@
 const express = require("express")
 const cors = require("cors")
+require("dotenv").config()
 
 const authRoutes = require("./routes/auth.routes")
 const meetingRoutes = require("./routes/meetings.routes")
@@ -37,8 +38,13 @@ app.use("/api/stage", stageRoutes)
 app.use("/api/polls", pollRoutes)
 app.use("/api/livekit-control", livekitControlRoutes)
 app.use("/api/chat", chatRoutes)
+
 app.get("/", (req, res) => {
   res.send("KSAAS Meet backend running")
 })
 
-module.exports = app
+const PORT = process.env.PORT || 5000
+
+app.listen(PORT, () => {
+  console.log(`KSAAS Meet backend running on port ${PORT}`)
+})
