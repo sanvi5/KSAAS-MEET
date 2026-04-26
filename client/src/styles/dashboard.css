@@ -1,0 +1,97 @@
+.dashboard-layout {
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  gap: 1.5rem;
+  padding: 1.5rem;
+}
+
+.create-meeting-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  box-shadow: var(--shadow);
+  padding: 1.5rem;
+  height: fit-content;
+}
+
+.create-meeting-card h2 {
+  margin-top: 0;
+  color: var(--blue-900);
+}
+
+.meeting-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.meeting-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 1.2rem;
+  box-shadow: var(--shadow);
+}
+
+.meeting-card-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.meeting-card-top h3 {
+  margin: 0;
+  color: var(--blue-900);
+}
+
+.meeting-card-top p {
+  margin: 0.3rem 0 0;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.meeting-card-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin: 1rem 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.meeting-card-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+@media (max-width: 960px) {
+  .dashboard-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+.export-link-btn {
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.meeting-note {
+  margin-top: 0.9rem;
+  font-weight: 600;
+}
+
+.warning-note {
+  color: #a56500;
+}
+
+.danger-note {
+  color: var(--danger);
+}
+
+.success-text {
+  color: var(--success);
+  font-weight: 700;
+}

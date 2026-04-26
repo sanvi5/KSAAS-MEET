@@ -1,0 +1,4 @@
+module.exports = {
+  MAX_MIC_SPEAKERS: 50,
+  MAX_CAMERA_PUBLISHERS: 20
+}
